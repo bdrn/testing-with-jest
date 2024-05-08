@@ -10,10 +10,12 @@ exports.push = function (x) {
 // Returnerar det översta elementet i stacken och tar bort det
 exports.pop = function () {
     return stack.pop();
-}
+};
 
 // Returnerar det översta elementet i stacken
 exports.peek = function () {
+    if (stack.length === 0) {
+        return undefined; // Returnera undefined om stacken är tom
+    }
     return _.last(stack);
-}
-
+};
