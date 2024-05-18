@@ -19,3 +19,13 @@ exports.peek = function () {
     }
     return _.last(stack);
 };
+
+// Tömmer stacken
+exports.clear = function () {
+    stack = [];
+};
+
+// Returnerar true om stacken är tom, annars false
+exports.isEmpty = function () {
+    return stack.length === 0;
+};
